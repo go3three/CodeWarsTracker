@@ -3,6 +3,8 @@
 ## Concept
 Tracking the scores of prospect coding bootcamp applicants on CodeWars.
 
+## User stories
+
 As a client looking for a Web based application (Tracker).
 > I want to link an existing Google application form of codecamp participants
 > with Codewars website.
