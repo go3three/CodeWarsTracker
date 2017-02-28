@@ -1,23 +1,26 @@
 {
-  "name": "codewarstracker",
-  "version": "1.0.0",
-  "description": "an application track the scores of users everyday and notify any idle user after 2 day",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/go3three/CodeWarsTracker.git"
-  },
-  "author": "Mohammed Naji, Akram Badah ,Ghada Ibrahim",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/go3three/CodeWarsTracker/issues"
-  },
-  "homepage": "https://github.com/go3three/CodeWarsTracker#readme",
-  "dependencies": {
-    "google-auth-library": "^0.10.0",
-    "googleapis": "^17.1.0"
-  }
+    "name": "codewarstracker",
+    "version": "1.0.0",
+    "description": "an application track the scores of users everyday and notify any idle user after 2 day",
+    "main": "index.js",
+    "scripts": {
+        "doit":"node_modules/.bin/nodemon index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/go3three/CodeWarsTracker.git"
+    },
+    "author": "Mohammed Naji, Akram Badah ,Ghada Ibrahim",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/go3three/CodeWarsTracker/issues"
+    },
+    "homepage": "https://github.com/go3three/CodeWarsTracker#readme",
+    "dependencies": {
+        "google-auth-library": "^0.10.0",
+        "googleapis": "^17.1.0"
+    },
+    "devDependencies": {
+        "nodemon": "^1.11.0"
+    }
 }
