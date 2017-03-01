@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="app/fun.js"></script>
+
 </head>
+
 <body>
 	<section class="content">
 		<div class="container">
 			<div class="wrp">
 				<p>What would you like to do ?</p>
 				<div class="dropdown-wrp">
-					<select class="dropdown">
+					<select id="dropdown" class="dropdown">
 						<option value="1">Track after 1 day</option>
 						<option value="2">Track after 2 days</option>
 						<option value="3">Track after 3 days</option>
 						<option value="4">Track after 4 days</option>
 					</select>
-				</div> 
+				</div>
 				<!-- dropdown-wrp -->
 				<span class="or">OR</span>
 				<div class="btn-wrp">
-					<button id="btn">Track Now</button>
+					<button onclick="track()" id="btn">Track Now</button>
 				</div>
 				<!-- btn-wrp -->
 			</div>
@@ -29,4 +33,8 @@
 		<!-- container -->
 	</section>
 </body>
+
+
+
+
 </html>

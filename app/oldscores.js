@@ -2,18 +2,16 @@
 
 var https = require('https');
 var google = require('googleapis');
-var key = require('./key.json');
-var utils = require('./utils.js');
-var SHEET_ID = '1YB8T1_lQSjO2Jxec4gctdPVgDq0ndxaNCJ6DHe7Pu3A';
+var key = require('../key.json');
+var utils = require('../utils.js');
+var SHEET_ID = '1YC76BjTB7DELD_dvERePZvbhnHR_5IxXG76MWj5Ui28';
 
-function getdata(cb) {
-  console.log("google.js");
-
+function setdata(da,cb) {
     var store = '';
     var jwtClient = new google.auth.JWT(
         key.client_email,
         null,
-        key.private_key, ['https://www.googleapis.com/auth/spreadsheets.readonly'],
+        key.private_key, ['https://www.googleapis.com/auth/spreadsheets'],
         null
     );
 
@@ -25,8 +23,8 @@ function getdata(cb) {
         var opts = {
             hostname: 'sheets.googleapis.com',
             port: 443,
-            path: `/v4/spreadsheets/${SHEET_ID}/values/Sheet1!A2:D6`,
-            method: 'GET',
+            path: `/v4/spreadsheets/${SHEET_ID}/values/Sheet1!A2:D6?valueInputOption=USER_ENTERED`,
+            method: 'PUT',
             headers: {
                 'Authorization': `Bearer ${tokens.access_token}`
             }
@@ -40,11 +38,12 @@ function getdata(cb) {
                 cb(store)
             });
         });
+        req.write(da);
         req.end();
     });
 
 }
 
 module.exports = {
-    getdata: getdata
+    setdata: setdata
 }
