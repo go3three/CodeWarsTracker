@@ -8,7 +8,6 @@ var SHEET_ID = '1YC76BjTB7DELD_dvERePZvbhnHR_5IxXG76MWj5Ui28';
 
 function setdata(da,cb) {
     var store = '';
-    console.log(da);
     var jwtClient = new google.auth.JWT(
         key.client_email,
         null,
@@ -46,5 +45,5 @@ function setdata(da,cb) {
 }
 
 module.exports = {
-    getdata: setdata
+    setdata: setdata
 }

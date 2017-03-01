@@ -2,13 +2,10 @@
 
 var https = require('https');
 var google = require('googleapis');
-var key = require('./key.json');
-var utils = require('./utils.js');
-var SHEET_ID = '1YB8T1_lQSjO2Jxec4gctdPVgDq0ndxaNCJ6DHe7Pu3A';
+var key = require('../key.json');
+var SHEET_ID = '1YC76BjTB7DELD_dvERePZvbhnHR_5IxXG76MWj5Ui28';
 
 function getdata(cb) {
-  console.log("google.js");
-
     var store = '';
     var jwtClient = new google.auth.JWT(
         key.client_email,

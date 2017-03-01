@@ -1,31 +1,32 @@
-var b = require("../google.js");
+var b = require("./getFirstTime.js");
 module.exports = function(cb) {
-  console.log("getdata");
-
     b.getdata(function(body) {
         obj = JSON.parse(body)
+
         var user = [];
-        var phone = [];
+        var score = [];
         var h = transform(obj.values);
 
-                        h=h.sort(compare);
+                h=h.sort(compare);
         h.forEach(function(ele) {
+
             user.push(ele.user);
-            phone.push(ele.phone);
+            score.push(ele.score);
         })
-        cb(user, phone)
+        cb(user, score)
     })
 };
 
 function transform(list) {
     return list.map(function(elem) {
         array = {
-            user: elem[2],
-            phone: elem[3]
+            user: elem[1],
+            score: elem[2]
         }
         return array
     });
 }
+
 
 function compare(a, b) {
 
