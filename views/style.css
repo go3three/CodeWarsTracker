@@ -47,3 +47,7 @@ body{
 	margin-bottom: 30px;
 	margin-top: 0;
 }
+.data table{
+	width: 100%;
+  text-align: left;
+}

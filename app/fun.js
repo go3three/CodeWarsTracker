@@ -30,28 +30,31 @@ function get_users_data() {
                   });
                   return tpl;
                 }
-                function renderOptions (database, cb) {
+
+                function renderOptions (database) {
                   var opt = '<td>{{td}}</td>';
-                  var rows = '<tr class="trow">{{tds}}</tr>';
-
+                  var rows = '<tr>{{tds}}</tr>';
+                  var body = '<div>{{trs}}</div>'
                   var data = Object.keys(database).map(function(elm) {
-                    return template(opt,{td:elm});
+                  var values = database[elm];
+                  var store = "";
+                  var counter = 1;
+                  return values.map(function(elem){
+                      counter++;
+                      store = store+"<td>"+elem+"</td>";
+                      if(counter%4 == 1){
+                        return template(rows,{tds:store});
+                      }
+                    });
                   }).join('');
-
                   var btn = document.getElementById('btn');
-                  tableBody.innerHTML = template(rows,{tds:data});
-                  btn.addEventListener('click', test);
+                  tableBody.innerHTML = template(body,{trs:data});
 
-                  cb(undefined, btn.value);
+
                 }
-                renderOptions (users, function(undefined,body){
-                  console.log(body);
-                });
+                renderOptions (users);
             }
     	  }
-    }
-    function test() {
-      alert("worker");
     }
 
     myRequest.open("POST", "http://localhost:8080/getdata",true);
