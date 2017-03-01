@@ -10,6 +10,7 @@ module.exports = function(username, cb) {
         }
     }
     var request = https.request(options, function(res) {
+      res.setEncoding('utf8');
         res.on('data', function(chunk) {
             cb(chunk)
         });

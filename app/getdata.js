@@ -10,21 +10,16 @@ module.exports = function(cb) {
             user.push(ele.user);
             phone.push(ele.phone);
         })
-cb(user,phone)
+        cb(user, phone)
     })
 };
 
 function transform(list) {
-
     return list.map(function(elem) {
-
         array = {
             user: elem[2],
             phone: elem[3]
         }
-
         return array
-
     });
-
 }
