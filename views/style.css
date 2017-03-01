@@ -33,7 +33,7 @@ body{
 	margin-bottom: 30px;
 }
 .content .wrp .dropdown-wrp select,
-.content .wrp .dropdown-wrp button{
+.content .wrp .btn-wrp button{
 	background-color: #000;
 	border:0;
 	padding: 15px 30px;
