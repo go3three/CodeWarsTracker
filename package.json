@@ -4,7 +4,8 @@
   "description": "an application track the scores of users everyday and notify any idle user after 2 day",
   "main": "index.js",
   "scripts": {
-    "doit": "node_modules/.bin/nodemon index.js"
+    "doit": "node_modules/.bin/nodemon index.js",
+    "dev:test": "nodemon tests/runner.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,8 @@
     "googleapis": "^17.1.0"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "shot": "^3.4.0",
+    "tape": "^4.6.3"
   }
 }

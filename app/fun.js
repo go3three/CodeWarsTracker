@@ -30,26 +30,10 @@ function get_users_data() {
   	  	        var userData = JSON.parse(myRequest.responseText);
                 var users = userData.values;
                 var tableBody = document.getElementById('datatable');
-                function renderOptions (database) {
-                  var rows = '<tr>{{tds}}</tr>';
-                  var body = '<div>{{trs}}</div>'
-                  var data = Object.keys(database).map(function(elm) {
-                  var values = database[elm];
-                  var store = "";
-                  var counter = 0;
-                  return values.map(function(elem){
-                      counter++;
-                      store = store+"<td>"+elem+"</td>";
-                      if(counter % values.length == 0){
-                        return template(rows,{tds:store});
-                      }
-                    });
-                  }).join('');
-                  var btn = document.getElementById('btn');
-                  tableBody.innerHTML = template(body,{trs:data});
-
-                }
-                renderOptions(users);
+                var btn = document.getElementById('btn');
+                var result = renderOptions(users);
+                tableBody.innerHTML = result;
+                console.log("res: ",result);
             }
     	  }
     }
@@ -57,4 +41,22 @@ function get_users_data() {
     myRequest.open("POST", "http://localhost:8080/getdata",true);
     myRequest.send();
 
+}
+
+function renderOptions (database) {
+  var rows = '<tr>{{tds}}</tr>';
+  var body = '<div>{{trs}}</div>'
+  var data = Object.keys(database).map(function(elm) {
+    var values = database[elm];
+    var store = "";
+    var counter = 0;
+    return values.map(function(elem){
+      counter++;
+      store = store+"<td>"+elem+"</td>";
+      if(counter % values.length == 0){
+        return template(rows,{tds:store});
+      }
+    });
+  }).join('');
+  return template(body,{trs:data});
 }
