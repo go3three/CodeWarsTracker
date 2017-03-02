@@ -18,7 +18,7 @@ function sender() {
                     client.messages.create({
                         to: "+972"+phone[user.indexOf(val)],
                         From: "+19045074062",
-                        body:"CodewarsReminder: get back work! ",
+                        body:"CodewarsReminder: get back work!",
                     }, function(err, message) {
                       console.log(err);
                         console.log(message);
@@ -33,6 +33,7 @@ function sender() {
     // },m *10000)
 }
 
+sender();
 module.exports = {
     sender: sender
 }
