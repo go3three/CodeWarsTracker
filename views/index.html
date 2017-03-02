@@ -24,7 +24,7 @@
 				<!-- dropdown-wrp -->
 				<span class="or">OR</span>
 				<div class="btn-wrp">
-					<button onclick="track()" id="btn">Track Now</button>
+					<button onclick="get_users_data()" id="btn">Track Now</button>
 				</div>
 				<!-- btn-wrp -->
 			</div>
@@ -32,9 +32,25 @@
 		</div>
 		<!-- container -->
 	</section>
+	<section class="data">
+		<div class="container">
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>User Name</th>
+						<th>Codewars Score</th>
+						<th>Phone Number</th>
+					</tr>
+				</thead>
+				<tbody id="datatable">
+
+				</tbody>
+			</table>
+		</div>
+	</section>
 </body>
 
-
-
+<script src="app/fun.js"></script>
 
 </html>

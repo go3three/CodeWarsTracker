@@ -4,7 +4,6 @@ var sd = require('./setdata.js');
 var username;
 var ob = '';
 var ft = 1;
-
 function FirstTime() {
     googleusers(function(u, p) {
         var store = '';
