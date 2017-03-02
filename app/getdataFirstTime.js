@@ -2,14 +2,11 @@ var b = require("./getFirstTime.js");
 module.exports = function(cb) {
     b.getdata(function(body) {
         obj = JSON.parse(body)
-
         var user = [];
         var score = [];
         var h = transform(obj.values);
-
-                h=h.sort(compare);
+        h = h.sort(compare);
         h.forEach(function(ele) {
-
             user.push(ele.user);
             score.push(ele.score);
         })
@@ -27,9 +24,7 @@ function transform(list) {
     });
 }
 
-
 function compare(a, b) {
-
     if (a.user < b.user)
         return -1;
     if (a.user > b.user)
