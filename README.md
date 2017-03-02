@@ -1,12 +1,12 @@
 # CodeWarsTracker
-[![Build Status](https://travis-ci.org/go3three/CodeWarsTracker.svg?branch=master)](https://travis-ci.org/go3three/CodeWarsTracker)
+[![Build Status](https://travis-ci.org/go3three/CodeWarsTracker.svg?branch=master)](https://travis-ci.org/go3three/CodeWarsTracker) [![Code Climate](https://codeclimate.com/repos/58b801126d00d1025c0044bb/badges/3ab27589512599156628/gpa.svg)](https://codeclimate.com/repos/58b801126d00d1025c0044bb/feed)
 
-[![Code Climate](https://codeclimate.com/repos/58b801126d00d1025c0044bb/badges/3ab27589512599156628/gpa.svg)](https://codeclimate.com/repos/58b801126d00d1025c0044bb/feed)
-
-https://three3.herokuapp.com/
+Website link https://three3.herokuapp.com/
 
 ## Concept
-Tracking the scores of prospect coding bootcamp applicants on CodeWars.
+> Tracking the scores of prospect coding bootcamp applicants on CodeWars and send SMS
+> messages for idle users to help with the evaluation and decision making process later.
+
 
 ## User stories
 
