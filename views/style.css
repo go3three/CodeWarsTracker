@@ -47,7 +47,16 @@ body{
 	margin-bottom: 30px;
 	margin-top: 0;
 }
+.data{
+	padding: 50px 15px;
+}
 .data table{
 	width: 100%;
   text-align: left;
+}
+.data table tbody{
+	color: transparent;
+}
+.data table tbody td{
+	color: #000;
 }

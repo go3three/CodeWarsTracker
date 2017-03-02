@@ -10,6 +10,15 @@ function track() {
     request.send(input.value);
 };
 
+function template(tpl, data) {
+  Object.keys(data).forEach(function(key){
+    tpl = tpl.replace(
+      new RegExp('\\{\\{\\s*' + key + '\\s*\\}\\}', 'g'),
+      data[key]
+    );
+  });
+  return tpl;
+}
 
 function get_users_data() {
 
@@ -21,28 +30,17 @@ function get_users_data() {
   	  	        var userData = JSON.parse(myRequest.responseText);
                 var users = userData.values;
                 var tableBody = document.getElementById('datatable');
-                function template(tpl, data) {
-                  Object.keys(data).forEach(function(key){
-                    tpl = tpl.replace(
-                      new RegExp('\\{\\{\\s*' + key + '\\s*\\}\\}', 'g'),
-                      data[key]
-                    );
-                  });
-                  return tpl;
-                }
-
                 function renderOptions (database) {
-                  var opt = '<td>{{td}}</td>';
                   var rows = '<tr>{{tds}}</tr>';
                   var body = '<div>{{trs}}</div>'
                   var data = Object.keys(database).map(function(elm) {
                   var values = database[elm];
                   var store = "";
-                  var counter = 1;
+                  var counter = 0;
                   return values.map(function(elem){
                       counter++;
                       store = store+"<td>"+elem+"</td>";
-                      if(counter%4 == 1){
+                      if(counter % values.length == 0){
                         return template(rows,{tds:store});
                       }
                     });
@@ -50,9 +48,8 @@ function get_users_data() {
                   var btn = document.getElementById('btn');
                   tableBody.innerHTML = template(body,{trs:data});
 
-
                 }
-                renderOptions (users);
+                renderOptions(users);
             }
     	  }
     }
