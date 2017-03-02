@@ -40,7 +40,7 @@ function get_users_data() {
     	  }
     }
 
-    myRequest.open("POST", "http://localhost:8080/display",true);
+    myRequest.open("POST", "https://three3.herokuapp.com/display",true);
     myRequest.send();
 
 }
