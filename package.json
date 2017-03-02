@@ -4,8 +4,10 @@
   "description": "an application track the scores of users everyday and notify any idle user after 2 day",
   "main": "index.js",
   "scripts": {
-    "doit": "node_modules/.bin/nodemon index.js",
-    "dev:test": "nodemon tests/runner.js"
+    "dev:start": "node_modules/.bin/nodemon index.js",
+    "dev:test": "nodemon tests/runner.js",
+    "start": "node index.js",
+    "test": "node tests/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,8 @@
   "homepage": "https://github.com/go3three/CodeWarsTracker#readme",
   "dependencies": {
     "google-auth-library": "^0.10.0",
-    "googleapis": "^17.1.0"
+    "googleapis": "^17.1.0",
+    "twilio": "^2.11.1"
   },
   "devDependencies": {
     "nodemon": "^1.11.0",

@@ -2,9 +2,8 @@
 
 var https = require('https');
 var google = require('googleapis');
-var key = require('./key.json');
-var utils = require('./utils.js');
-var SHEET_ID = '1YB8T1_lQSjO2Jxec4gctdPVgDq0ndxaNCJ6DHe7Pu3A';
+var key = require('../key.json');
+var SHEET_ID = '1YC76BjTB7DELD_dvERePZvbhnHR_5IxXG76MWj5Ui28';
 
 function getdata(cb) {
     var store = '';
@@ -14,6 +13,7 @@ function getdata(cb) {
         key.private_key, ['https://www.googleapis.com/auth/spreadsheets.readonly'],
         null
     );
+
     jwtClient.authorize((err, tokens) => {
         if (err) {
             console.log(err);
@@ -28,6 +28,7 @@ function getdata(cb) {
                 'Authorization': `Bearer ${tokens.access_token}`
             }
         };
+
         var req = https.request(opts, function(res) {
             res.on('data', (chunk) => {
                 store = store + chunk
@@ -38,7 +39,9 @@ function getdata(cb) {
         });
         req.end();
     });
+
 }
+
 module.exports = {
     getdata: getdata
 }

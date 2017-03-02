@@ -38,7 +38,7 @@ function getdata(cb) {
                 cb(store)
             });
         });
-        var d='{ "majorDimension": "ROWS",\
+        var d = '{ "majorDimension": "ROWS",\
   "values": [\
     ["Item", "Cost", "Stocked", "Ship Date"],\
     ["aa", "$222.50", "0", "3/1/2016"],\
@@ -51,8 +51,7 @@ function getdata(cb) {
     });
 
 }
-getdata(function(Data){
-console.log(Data)
+getdata(function(Data) {
 
 })
 module.exports = {
