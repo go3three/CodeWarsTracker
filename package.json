@@ -8,7 +8,7 @@
     "dev:test": "nodemon tests/runner.js",
     "start": "node index.js",
     "test": "node tests/index.js",
-    "scheduler":"node ./app/scheduler.js"
+    "scheduler":"node ./app/scheduler.js",
     "cov": "./node_modules/.bin/istanbul cover tests/runner.js"
   },
   "repository": {
