@@ -6,16 +6,12 @@ var ob = '';
 var ft = 1;
 
 function FirstTime() {
-
     googleusers(function(u, p) {
         var store = '';
-
-
         u.forEach(function(elm) {
             codewars(elm, function(body) {
                 data = body.toString();
                 data = JSON.parse(data);
-
                 var score = data.ranks.languages.javascript.score;
                 username = data.username;
                 var name = data.name;
@@ -32,9 +28,7 @@ function FirstTime() {
                     arr = '["' + name + '","' + username + '","' + score + '","' + phone + '"],';
                     store = store + arr;
                     store = store + tail;
-                
                     sd(store, function() {});
-
                 } else {
                     arr = '["' + name + '","' + username + '","' + score + '","' + phone + '"],';
                     store = store + arr;
@@ -44,13 +38,13 @@ function FirstTime() {
         })
     });
 }
+
 module.exports = {
     FirstTime: FirstTime
 
 }
 
 function compare(a, b) {
-
     if (a.username < b.username)
         return -1;
     if (a.username > b.username)

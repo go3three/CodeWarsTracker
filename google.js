@@ -7,8 +7,6 @@ var utils = require('./utils.js');
 var SHEET_ID = '1YB8T1_lQSjO2Jxec4gctdPVgDq0ndxaNCJ6DHe7Pu3A';
 
 function getdata(cb) {
-  console.log("google.js");
-
     var store = '';
     var jwtClient = new google.auth.JWT(
         key.client_email,
@@ -16,7 +14,6 @@ function getdata(cb) {
         key.private_key, ['https://www.googleapis.com/auth/spreadsheets.readonly'],
         null
     );
-
     jwtClient.authorize((err, tokens) => {
         if (err) {
             console.log(err);
@@ -31,7 +28,6 @@ function getdata(cb) {
                 'Authorization': `Bearer ${tokens.access_token}`
             }
         };
-
         var req = https.request(opts, function(res) {
             res.on('data', (chunk) => {
                 store = store + chunk
@@ -42,9 +38,7 @@ function getdata(cb) {
         });
         req.end();
     });
-
 }
-
 module.exports = {
     getdata: getdata
 }
