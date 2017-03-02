@@ -25,4 +25,4 @@ As a client looking for a Web based application (Tracker).
 
 ## Mind Map
 
-![alt text](http://imgh.us/index_js_creating_server.png)
+![alt text](http://imgh.us/index_js_creating_server_1.png)
