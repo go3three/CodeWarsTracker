@@ -15,15 +15,15 @@ function sender() {
             b(function(u, phone) {
                 user.map(function(val) {
                     console.log("CodewarsReminder: get back work!");
-                    client.messages.create({
-                        to: "+972"+phone[user.indexOf(val)],
-                        From: "+19045074062",
-                        body:"CodewarsReminder: get back work!",
-                    }, function(err, message) {
-                      console.log(err);
-                        console.log(message);
-                        console.log(err);
-                    });
+                    // client.messages.create({
+                    //     to: "+972"+phone[user.indexOf(val)],
+                    //     From: "+19045074062",
+                    //     body:"CodewarsReminder: get back work!",
+                    // }, function(err, message) {
+                    //   console.log(err);
+                    //     console.log(message);
+                    //     console.log(err);
+                    // } );
                 })
             })
         } else {
