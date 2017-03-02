@@ -1,2 +1,6 @@
 node_modules
 npm-debug.log
+<<<<<<< HEAD
+=======
+coverage
+>>>>>>> c1044ed0d78728f0227d02302c3b4878a0728cbe

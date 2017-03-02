@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for CodeWarsTracker/app/comparison.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">CodeWarsTracker/app/</a> comparison.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">24.14% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>7/29</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">24.14% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>7/29</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var getdataFirstTime = require('./getdataFirstTime.js');
+var googleusers = require('./getdata.js');
+var userdata = require('./userdata.js');
+var array = [];
+&nbsp;
+<span class="fstat-no" title="function not covered" >function comparison(cb) {</span>
+<span class="cstat-no" title="statement not covered" >    var idle = [];</span>
+<span class="cstat-no" title="statement not covered" >    getdataFirstTime(<span class="fstat-no" title="function not covered" >function(user, score) {</span></span>
+<span class="cstat-no" title="statement not covered" >        var l = 1;</span>
+<span class="cstat-no" title="statement not covered" >        user.forEach(<span class="fstat-no" title="function not covered" >function(elm) {</span></span>
+<span class="cstat-no" title="statement not covered" >            userdata(elm, <span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                var obj = JSON.parse(data);</span>
+<span class="cstat-no" title="statement not covered" >                array.push(obj);</span>
+<span class="cstat-no" title="statement not covered" >                if (l === user.length) {</span>
+<span class="cstat-no" title="statement not covered" >                    array = array.sort(compare);</span>
+<span class="cstat-no" title="statement not covered" >                    array.forEach(<span class="fstat-no" title="function not covered" >function(e) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        var thenewscore = e.ranks.languages.javascript.score;</span>
+<span class="cstat-no" title="statement not covered" >                        var sc = score[array.indexOf(e)];</span>
+<span class="cstat-no" title="statement not covered" >                        if (sc == thenewscore) {</span>
+<span class="cstat-no" title="statement not covered" >                            idle.push(user[array.indexOf(e)])</span>
+<span class="cstat-no" title="statement not covered" >                            if (array.length == array.indexOf(e) + 1) {</span>
+<span class="cstat-no" title="statement not covered" >                                cb(idle);</span>
+                            }
+                        }
+                    })
+                }
+<span class="cstat-no" title="statement not covered" >                l++;</span>
+            });
+        })
+    })
+&nbsp;
+}
+module.exports = {
+    comparison: comparison
+}
+&nbsp;
+<span class="fstat-no" title="function not covered" >function compare(a, b) {</span>
+<span class="cstat-no" title="statement not covered" >    if (a.username &lt; b.username)</span>
+<span class="cstat-no" title="statement not covered" >        return -1;</span>
+<span class="cstat-no" title="statement not covered" >    if (a.username &gt; b.username)</span>
+<span class="cstat-no" title="statement not covered" >        return 1;</span>
+<span class="cstat-no" title="statement not covered" >    return 0;</span>
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Mar 02 2017 13:14:28 GMT+0200 (EET)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
