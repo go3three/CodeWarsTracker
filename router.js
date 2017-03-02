@@ -3,4 +3,5 @@ module.exports = {
     'GET /style.css': require('./app/css.js'),
     'GET /app/fun.js': require('./app/main.js'),
     'POST /getdata': require('./app/sender.js'),
+    'POST /display': require('./app/display.js'),
 };

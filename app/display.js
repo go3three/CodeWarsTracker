@@ -4,12 +4,9 @@ var b=require('./getFirstTime.js');
 module.exports=function (req,res){
   b.getdata(function(body) {
       obj = JSON.parse(body)
-      var user = [];
-      var phone = [];
-      var h = transform(obj.values);
-      h = h.sort(compare);
-      res.end(h)
 
+      var data = JSON.stringify(obj);
+      res.end(data);
   })
 }
 
