@@ -4,9 +4,11 @@
 Website link https://three3.herokuapp.com/
 
 ## Team
-Akram Badah
-Ghada Ibrahim
-Mohammed Naji
+``Akram Badah``
+
+``Ghada Ibrahim``
+
+``Mohammed Naji``
 
 ## User stories
 
