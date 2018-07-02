@@ -24,7 +24,7 @@
   "dependencies": {
     "google-auth-library": "^0.10.0",
     "googleapis": "^17.1.0",
-    "twilio": "^2.11.1"
+    "twilio": "^3.0.0"
   },
   "devDependencies": {
     "codeclimate-test-reporter": "^0.4.1",
