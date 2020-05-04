@@ -8,8 +8,10 @@
     "dev:test": "nodemon tests/runner.js",
     "start": "node index.js",
     "test": "node tests/index.js",
-    "scheduler":"node ./app/scheduler.js",
-    "cov": "./node_modules/.bin/istanbul cover tests/runner.js"
+    "scheduler": "node ./app/scheduler.js",
+    "cov": "./node_modules/.bin/istanbul cover tests/runner.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -24,7 +26,8 @@
   "dependencies": {
     "google-auth-library": "^0.10.0",
     "googleapis": "^17.1.0",
-    "twilio": "^2.11.1"
+    "twilio": "^2.11.1",
+    "snyk": "^1.317.0"
   },
   "devDependencies": {
     "codeclimate-test-reporter": "^0.4.1",
@@ -32,5 +35,6 @@
     "nodemon": "^1.11.0",
     "shot": "^3.4.0",
     "tape": "^4.6.3"
-  }
+  },
+  "snyk": true
 }
