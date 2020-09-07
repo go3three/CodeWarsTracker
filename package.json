@@ -22,9 +22,9 @@
   },
   "homepage": "https://github.com/go3three/CodeWarsTracker#readme",
   "dependencies": {
-    "google-auth-library": "^0.10.0",
-    "googleapis": "^17.1.0",
-    "twilio": "^2.11.1"
+    "google-auth-library": "^6.0.0",
+    "googleapis": "^49.0.0",
+    "twilio": "^3.41.0"
   },
   "devDependencies": {
     "codeclimate-test-reporter": "^0.4.1",
